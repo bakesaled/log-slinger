@@ -1,0 +1,49 @@
+{
+  "name": "@bakesaled/log-slinger",
+  "version": "1.0.0",
+  "description": "Simple JavaScript logger.",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "cjs": "tndex.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "test:watch": "npm run test -- --watch",
+    "build": "npm run clean && rollup -c",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "start": "tsc-watch -p src/tsconfig.app.json --onSuccess \"node ./dist-app/examples/index.js\"",
+    "clean": "rm -rf ./dist && mkdir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakesaled/log-slinger.git"
+  },
+  "keywords": [
+    "logger",
+    "JavaScript"
+  ],
+  "author": "Brandon Eleuterio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bakesaled/log-slinger/issues"
+  },
+  "homepage": "https://github.com/bakesaled/log-slinger#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.10",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "ts-jest": "^23.10.5",
+    "tsc-watch": "^1.0.30",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
+}
