@@ -10,7 +10,7 @@
     "test": "jest --config jestconfig.json",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
-    "test:ci": "npm run test:coverage -- --runInBand --ci --logHeapUsage",
+    "test:ci": "npm run test:coverage -- --runInBand --ci --logHeapUsage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "build": "npm run clean && npm run lint && npm run format && rollup -c",
     "build:ci": "rollup -c",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -38,6 +38,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
     "rollup": "^0.67.3",
