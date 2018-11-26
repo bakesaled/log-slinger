@@ -1,5 +1,5 @@
-import { LogSlinger } from '../log-slinger';
 import { LogLevel } from '../log-level';
+import { LogSlinger } from '../log-slinger';
 
 export class BasicExample {
   private logger: LogSlinger;
@@ -7,7 +7,7 @@ export class BasicExample {
     this.logger = new LogSlinger(LogLevel.All);
   }
 
-  init() {
+  public init() {
     this.logger.info('testing info234');
   }
 }

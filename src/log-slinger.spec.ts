@@ -1,8 +1,8 @@
-import { LogSlinger } from './log-slinger';
 import { LogLevel } from './log-level';
+import { LogSlinger } from './log-slinger';
 
 describe('LogSlinger', () => {
-  let logger = new LogSlinger(LogLevel.All);
+  const logger = new LogSlinger(LogLevel.All);
   it('should create', () => {
     expect(logger).toBeDefined();
   });
