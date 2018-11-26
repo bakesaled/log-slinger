@@ -1,11 +1,11 @@
 import { LogLevel } from './log-level';
 
 export class LogSlinger {
-  constructor(private logLevel: LogLevel) {}
+  constructor(private logLevel: LogLevel = LogLevel.None) {}
 
   public info(msg: string, ...params: any[]) {
     if (this.logLevel <= LogLevel.Info) {
-      this.writeToConsole('info', msg, params);
+      this.writeToConsole('info', msg, ...params);
     }
   }
 
