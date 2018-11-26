@@ -5,13 +5,12 @@ export class LogSlinger {
 
   public info(msg: string, ...params: any[]) {
     if (this.logLevel <= LogLevel.Info) {
-      if (params.length) {
-        /* tslint:disable-next-line:no-console */
-        console.info(msg, params);
-      } else {
-        /* tslint:disable-next-line:no-console */
-        console.info(msg);
-      }
+      this.writeToConsole('info', msg, params);
     }
+  }
+
+  private writeToConsole(methodName: string, msg: string, ...params: any[]) {
+    /* tslint:disable-next-line:no-console */
+    (console as any)[methodName](msg, ...params);
   }
 }
