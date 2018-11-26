@@ -3,3 +3,4 @@ node_modules
 /dist-app
 /.idea
 /.rpt2_cache
+/coverage
