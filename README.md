@@ -1,4 +1,4 @@
-# log-slinger
+# Log Slinger
 Simple JavaScript logger.
 
 [![Build Status][travis-badge]][travis-badge-url]
@@ -7,3 +7,15 @@ Simple JavaScript logger.
 [travis-badge-url]: https://travis-ci.com/bakesaled/log-slinger
 
 [![Coverage Status](https://coveralls.io/repos/github/bakesaled/log-slinger/badge.svg?branch=master)](https://coveralls.io/github/bakesaled/log-slinger?branch=master)
+
+## Installation
+
+Run `npm install @bakesaled/log-slinger`
+
+## Usage
+
+```javascript
+const logger = new LogSlinger(LogLevel.Debug);
+
+logger.debug('Pecan Pie');
+```
