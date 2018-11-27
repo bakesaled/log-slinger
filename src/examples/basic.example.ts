@@ -8,6 +8,9 @@ export class BasicExample {
   }
 
   public init() {
-    this.logger.info('testing info234');
+    this.logger.debug('testing debug');
+    this.logger.info('testing info');
+    this.logger.warn('testing warn');
+    this.logger.error('testing error');
   }
 }

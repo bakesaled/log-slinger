@@ -29,4 +29,39 @@ describe('LogSlinger', () => {
     logger['writeToConsole']('error', 'pie', '5 slices');
     expect(spy).toHaveBeenCalledWith('pie', '5 slices');
   });
+
+  it('should not log message if LogLevel is too high', () => {
+    logger = new LogSlinger(LogLevel.Info);
+    const spy = spyOn(logger as any, 'writeToConsole');
+    logger.debug('ice cream');
+    expect(spy).not.toHaveBeenCalledWith('debug', 'ice cream');
+  });
+
+  it('should log info', () => {
+    logger = new LogSlinger(LogLevel.Info);
+    const spy = spyOn(logger as any, 'writeToConsole');
+    logger.info('cake');
+    expect(spy).toHaveBeenCalledWith('info', 'cake');
+  });
+
+  it('should log debug', () => {
+    logger = new LogSlinger(LogLevel.Debug);
+    const spy = spyOn(logger as any, 'writeToConsole');
+    logger.debug('muffin');
+    expect(spy).toHaveBeenCalledWith('debug', 'muffin');
+  });
+
+  it('should log warn', () => {
+    logger = new LogSlinger(LogLevel.Warn);
+    const spy = spyOn(logger as any, 'writeToConsole');
+    logger.warn('donut');
+    expect(spy).toHaveBeenCalledWith('warn', 'donut');
+  });
+
+  it('should log error', () => {
+    logger = new LogSlinger(LogLevel.Error);
+    const spy = spyOn(logger as any, 'writeToConsole');
+    logger.error('milk shake');
+    expect(spy).toHaveBeenCalledWith('error', 'milk shake');
+  });
 });
