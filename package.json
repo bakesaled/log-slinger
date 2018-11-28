@@ -2,9 +2,9 @@
   "name": "@bakesaled/log-slinger",
   "version": "1.0.0",
   "description": "Simple JavaScript logger.",
-  "main": "index.umd.js",
-  "module": "index.es.js",
-  "cjs": "tndex.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "cjs": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",

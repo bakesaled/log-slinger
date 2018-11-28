@@ -5,16 +5,16 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: 'dist/' + pkg.cjs,
+      file: pkg.cjs,
       format: 'cjs',
     },
     {
-      file: 'dist/' + pkg.module,
+      file: pkg.module,
       format: 'es',
     },
     {
       name: 'logSlinger',
-      file: 'dist/' + pkg.main,
+      file: pkg.main,
       format: 'umd'
     }
   ],
