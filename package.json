@@ -16,7 +16,12 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "start": "tsc-watch -p src/tsconfig.app.json --onSuccess \"node ./dist-app/examples/index.js\"",
-    "clean": "rm -rf ./dist && mkdir dist"
+    "clean": "rm -rf ./dist && mkdir dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

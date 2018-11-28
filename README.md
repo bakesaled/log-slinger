@@ -6,7 +6,7 @@ Simple JavaScript logger.
 [travis-badge]: https://travis-ci.com/bakesaled/log-slinger.svg?branch=master
 [travis-badge-url]: https://travis-ci.com/bakesaled/log-slinger
 
-[![Coverage Status](https://coveralls.io/repos/github/bakesaled/log-slinger/badge.svg?branch=master)](https://coveralls.io/github/bakesaled/log-slinger?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/bakesaled/log-slinger/badge.svg?branch=master&kill_cache=1)](https://coveralls.io/github/bakesaled/log-slinger?branch=master)
 
 ## Installation
 
